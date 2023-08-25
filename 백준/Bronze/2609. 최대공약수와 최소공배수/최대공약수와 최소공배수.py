@@ -1,6 +1,13 @@
-import math
+import sys
 
-a, b = map(int, input().split())
+A, B = map(int, sys.stdin.readline().split())
+a, b = max(A, B), min(A, B)
 
-print(math.gcd(a,b))
-print(math.lcm(a, b))
+while b != 0:
+    a = a % b
+    a, b = b, a
+
+print(a)
+print(int(A*B//a))
+
+
