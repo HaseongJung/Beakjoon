@@ -1,13 +1,12 @@
 S = int(input())
 
 left, right = 1, S
-
 N = 0
 
-while (left <= right):
+while (left<=right):
     mid = (left + right) // 2
-    sum = mid * (mid+1) // 2
-    if sum <= S:
+    total = mid*(mid+1) // 2
+    if total <= S:
         N = mid
         left = mid + 1
     else:
