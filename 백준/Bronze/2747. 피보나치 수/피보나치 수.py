@@ -1,7 +1,14 @@
-n = int(input())
+def fibo(n: int):
+    arr = []
+    for i in range(n):
+        if (i <= 1):
+            arr.append(i)
+        else:
+            arr.append(arr[i-2] + arr[i-1])
 
-num = [0, 1]
-for i in range(2, n+1):
-    num.append(num[-2] + num[-1])
+    return arr
 
-print(num[n])
+
+if __name__ == "__main__":
+    n = int(input())
+    print(fibo(n+1)[-1])
